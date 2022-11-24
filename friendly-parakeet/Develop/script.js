@@ -62,44 +62,41 @@ function generatePassword() {
     options++;
   }
 
- if (options === 4)
- {
+ if (options === 4) {
   let x1 = Math.floor(math.random() * length);
   let x2 = Math.floor(math.random() * (length - x1));
   let x3 = Math.floor(math.random() * (length - x2));
   let x4 = (length - x3);
  }
- if (options === 3)
- {
+ if (options === 3) {
   let x1 = Math.floor(math.random() * length);
   let x2 = Math.floor(math.random() * (length - x1));
   let x3 = (length - x2);
  }
- if (options === 2)
- {
+ if (options === 2) {
   let x1 = Math.floor(math.random() * length);
   let x2 = (length - x1);
  }
 
- // need to randomize the selection of letters
- if (options === 4)
- {
-
+ if (options === 4) {
+  for (let x = 0; x < x1; x++) {
+    //let upperChar[x] = Math.floor(math.random() * upperOptions);
+  }
+  for (let x = 0; x < x2; x++) {
+    //let lowerChar[x] = Math.floor(math.random() * lowerOptions);
+  }
+  for (let x = 0; x < x3; x++) {
+    //let numberChar[x] = Math.floor(math.random() * numberOptions);
+  }
+  for (let x = 0; x < x4; x++) {
+    //let specialChar[x] = Math.floor(math.random() * specialOptions);
+  }
  }
- else if (options === 3)
- {
+ // need to develop if option are less than 3
 
- }
- else if (options === 2)
- {
- 
- }
- else
- {
 
- }
 
- 
+
   document.querySelector(".card-header").textContent = "We changed the textContent"
   return "A password to be generated in the future"
 }
