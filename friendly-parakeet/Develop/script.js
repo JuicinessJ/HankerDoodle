@@ -62,37 +62,31 @@ function generatePassword() {
     options++;
   }
 
- if (options === 4) {
-  let x1 = Math.floor(math.random() * length);
-  let x2 = Math.floor(math.random() * (length - x1));
-  let x3 = Math.floor(math.random() * (length - x2));
-  let x4 = (length - x3);
- }
- if (options === 3) {
-  let x1 = Math.floor(math.random() * length);
-  let x2 = Math.floor(math.random() * (length - x1));
-  let x3 = (length - x2);
- }
- if (options === 2) {
-  let x1 = Math.floor(math.random() * length);
-  let x2 = (length - x1);
- }
+  for (let x = 0; x < length; x++)
+  {
+    let y = Math.floor(Math.random() * options);
+    if (y === 0)
+    {
+      let a = Math.floor(Math.random() * upperOptions.length);
 
- if (options === 4) {
-  for (let x = 0; x < x1; x++) {
-    //let upperChar[x] = Math.floor(math.random() * upperOptions);
+    }
+    if (y === 1)
+    {
+      let a = Math.floor(Math.random() * lowerOptions.length);
+    }
+    if (y === 2)
+    {
+      let a = Math.floor(Math.random() * numberOptions.length);
+    }
+    if (y === 3)
+    {
+      let a = Math.floor(Math.random() * specialOptions.length);
+    }
   }
-  for (let x = 0; x < x2; x++) {
-    //let lowerChar[x] = Math.floor(math.random() * lowerOptions);
-  }
-  for (let x = 0; x < x3; x++) {
-    //let numberChar[x] = Math.floor(math.random() * numberOptions);
-  }
-  for (let x = 0; x < x4; x++) {
-    //let specialChar[x] = Math.floor(math.random() * specialOptions);
-  }
- }
- // need to develop if option are less than 3
+
+ /* better idea - instead of what i was doing. keep the IF statement to decide how many options there will be. but after use a FOR loop that ends with length inside has a math.random that max is options that'll decide on which option gets selected. Up, low, num, spec. 
+ Then inside that will have another IF statement if one of the options was selected it'll run another math.random inside the IF to decide which char inside the array gets selected with the max be arr.length.
+ After will need to figure out how to write the password*/
 
 
 
