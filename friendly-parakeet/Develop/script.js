@@ -68,7 +68,6 @@ function generatePassword() {
     if (y === 0)
     {
       let a = Math.floor(Math.random() * upperOptions.length);
-
     }
     if (y === 1)
     {
