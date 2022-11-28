@@ -61,10 +61,13 @@ function generatePassword() {
   {
     options++;
   }
-
+  var finalPassword;
   for (let x = 0; x < length; x++)
   {
     let y = Math.floor(Math.random() * options);
+    // add options[y] to final password
+    // finalPassword = finalPassword + options[y]
+    // finalPassword += options[y]
     if (y === 0)
     {
       let a = Math.floor(Math.random() * upperOptions.length);
@@ -91,6 +94,7 @@ function generatePassword() {
 
 
   document.querySelector(".card-header").textContent = "We changed the textContent"
+  // return final password
   return "A password to be generated in the future"
 }
 
