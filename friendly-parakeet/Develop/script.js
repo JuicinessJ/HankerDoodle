@@ -15,10 +15,10 @@ Then another FOR loop which will be responsible for each criteria after and anot
 var generateBtn = document.querySelector("#generate");
 
 // Arrays
-const upperOptions = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
-const lowerOptions = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
-const numberOptions = ["1","2","3","4","5","6","7","8","9","0"];
-const specialOptions = ["!","@","#","$","%","^","&","*","(",")","_","+","-","=","{","}","|","[","]",",","<",">","?",".","/","'","`","~"];
+const upperOptions = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
+const lowerOptions = ["abcdefghijklmnopqrstuvwxyz"];
+const numberOptions = ["1234567890"];
+const specialOptions = ["!@#$%^&*()_+-={}[]|\~`:;'<,>.?/"];
 
 // Write password to the #password input
 function writePassword() {
@@ -40,62 +40,42 @@ function generatePassword() {
   { 
     prompt("Length does not meet criteria. Must be more than 8 and less than 128 with only numbers");
   } */
-  
-  let options = 0;
+
+
+  /*console.log(upperOptions)
+  console.log(lowerOptions)
+  console.log(numberOptions)
+  console.log(specialOptions)*/
+  var PasswordOptions = [];
   if (upper === true)
   {
-    options++;
+    PasswordOptions += upperOptions;
   }
 
   if (lower === true)
   {
-    options++;
+    PasswordOptions += lowerOptions;
   }
 
   if (numbers === true)
   {
-    options++;
+    PasswordOptions += numberOptions;
   }
 
   if (special === true)
   {
-    options++;
+    PasswordOptions += specialOptions;
   }
-  var finalPassword;
+  var finalPassword = [];
+  //console.log(PasswordOptions.length)
+  //console.log(PasswordOptions)
   for (let x = 0; x < length; x++)
   {
-    let y = Math.floor(Math.random() * options);
-    // add options[y] to final password
-    // finalPassword = finalPassword + options[y]
-    // finalPassword += options[y]
-    if (y === 0)
-    {
-      let a = Math.floor(Math.random() * upperOptions.length);
-    }
-    if (y === 1)
-    {
-      let a = Math.floor(Math.random() * lowerOptions.length);
-    }
-    if (y === 2)
-    {
-      let a = Math.floor(Math.random() * numberOptions.length);
-    }
-    if (y === 3)
-    {
-      let a = Math.floor(Math.random() * specialOptions.length);
-    }
+    let y = Math.floor(Math.random() * PasswordOptions.length);
+    finalPassword += PasswordOptions[y];
   }
-
- /* better idea - instead of what i was doing. keep the IF statement to decide how many options there will be. but after use a FOR loop that ends with length inside has a math.random that max is options that'll decide on which option gets selected. Up, low, num, spec. 
- Then inside that will have another IF statement if one of the options was selected it'll run another math.random inside the IF to decide which char inside the array gets selected with the max be arr.length.
- After will need to figure out how to write the password*/
-
-
-
-
-  document.querySelector(".card-header").textContent = "We changed the textContent"
-  // return final password
-  return "A password to be generated in the future"
+  console.log(finalPassword.length)
+  return finalPassword;
 }
 
 // Add event listener to generate button
