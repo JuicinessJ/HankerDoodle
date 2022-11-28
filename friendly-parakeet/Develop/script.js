@@ -66,7 +66,7 @@ function generatePassword() {
   {
     PasswordOptions += specialOptions;
   }
-  var finalPassword = [];
+  var finalPassword = "";
   //console.log(PasswordOptions.length)
   //console.log(PasswordOptions)
   for (let x = 0; x < length; x++)
