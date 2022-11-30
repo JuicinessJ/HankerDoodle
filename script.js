@@ -39,6 +39,7 @@ function generatePassword() {
   if (length <= 8 || length > 128 || typeof length === string) 
   { 
     prompt("Length does not meet criteria. Must be more than 8 and less than 128 with only numbers");
+    return;
   } 
 
   var PasswordOptions = [];
