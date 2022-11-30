@@ -36,16 +36,11 @@ function generatePassword() {
   const numbers = confirm("Do you want numbers?");
   const special = confirm("Do you want special characters?");
 
-  /*if (length <= 8 || length > 128 || typeof length === string) 
+  (length <= 8 || length > 128 || typeof length === string) 
   { 
     prompt("Length does not meet criteria. Must be more than 8 and less than 128 with only numbers");
-  } */
+  } 
 
-
-  /*console.log(upperOptions)
-  console.log(lowerOptions)
-  console.log(numberOptions)
-  console.log(specialOptions)*/
   var PasswordOptions = [];
   if (upper === true)
   {
