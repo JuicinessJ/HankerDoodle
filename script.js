@@ -74,7 +74,6 @@ function generatePassword() {
     let y = Math.floor(Math.random() * PasswordOptions.length);
     finalPassword += PasswordOptions[y];
   }
-  console.log(finalPassword.length)
   return finalPassword;
 }
 
