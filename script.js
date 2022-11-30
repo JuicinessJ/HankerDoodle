@@ -31,16 +31,20 @@ function writePassword() {
 
 function generatePassword() {
   const length = prompt("How long do you want the password to be? Enter number only! Between 8-128");
+  if (length < 8 || length > 128) 
+  { 
+    confirm("Length does not meet criteria. Must be at least 8 and no more than 128 with only numbers");
+    return;
+  }
   const upper = confirm("Do you want uppercases?");
   const lower = confirm("Do you want lowercases?");
   const numbers = confirm("Do you want numbers?");
   const special = confirm("Do you want special characters?");
-
-  if (length <= 8 || length > 128 || typeof length === string) 
-  { 
-    prompt("Length does not meet criteria. Must be more than 8 and less than 128 with only numbers");
+  if (upper === false && lower === false && numbers === false && special === false)
+  {
+    alert("Nothing was selected");
     return;
-  } 
+  }
 
   var PasswordOptions = [];
   if (upper === true)

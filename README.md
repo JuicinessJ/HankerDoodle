@@ -14,7 +14,7 @@ Description
 Enter Github > Hit Green "Code" Button > Inside the clone drop down box select method of cloning(https, ssh, github CLI) > If cloning by SSH open a terminal or git inside enter > $ git clone (the ssh) > Then Viola
 
 ## Usage
-![group]()
+![group](/Capture.PNG)
 #credits I would like to credit the resources from past recordings and resources with some addition of online resources such as Google and my tutor Andrew.
 
 ## License
